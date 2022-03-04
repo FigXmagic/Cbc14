@@ -1,1 +1,1 @@
-# Week1 Files and Homework Folder
+Folder for each week with files created and Homework assignments submitted
