@@ -1,5 +1,20 @@
 ## Folder for each week with files created and Homework assignments submitted
 ### Week 1  
+-Introductions
+-What is HTML?
+-What is CSS?
+-What is Javascript?
+-How is the DOM used?
+-What is OOP?
+-What is Node?
+-What is SQL?
+-What is Express.js?
+-What is NPM?
+-Why is HTML important?
+-Why is CSS important?
+-Why is the DOM important?
+-Why is Javascript important?
+
 ### Week 2
 #### HTML
 - HTML Structure 
