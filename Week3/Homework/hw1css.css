@@ -64,10 +64,10 @@ p {
   display: block;
 }
 .d-inline {
-  display: block;
+  display: inline;
 }
 .d-inline-block {
-  display: inline;
+  display: inline-block;
 }
 .relative {
   height: 400px;
