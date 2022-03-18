@@ -23,13 +23,12 @@
     clear: both;
 }
 
-@media screen (max-width: 500px) {
+@media (max-width: 500px) {
 
-  }
- .div-1, .div-2{
+.div-1, .div-2{
     float: none;
 }
-
+}
 
 .remAndEm {
     font-size: 20px;
@@ -56,18 +55,24 @@
 }
 
 .vh-100 {
-    height: 100%;
+    height: 100vh;
 }
 
-.h-50 {
+.border-red > .h-50 {
     height: 50%;
 }
 
+div > p:first-of-type {
+    color: blue;
+}
 
-17) selector: all elements with the class of "vh-100" declarations: set height to 100% of the viewport
-18) selector: all element with the class of "h-50" declarations: set height to 50% of the parent container
-NOTE: notice how if you adjust the "vh-100" class to a lower value like 50vh instead of 100vh that the child div will take 50% of the parent container. e.g. 50% of 100vh is 50vh and 50% of 50vh is 25vh
+:first-of-type > p {
+    color: green;
+}
 
+input[type="email"] {
+    border: red;
+}
 Advanced Selectors
 19) selector: all paragraphs that are direct children of div's declarations: set the text color to blue
 20) selector: all sections that come immediately after a div declarations: set the text color to green
