@@ -1,84 +1,75 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .box {
-    width: 40%;
-    height: 25vh;
-    background-color: #333333;
-    margin: 5%;
+  width: 40%;
+  height: 25vh;
+  background-color: #333333;
+  margin: 5%;
 }
 
 .div-1 {
-    float: left;
+  float: left;
 }
 
 .div-2 {
-    float: right;
+  float: right;
 }
 
-.clr  {
-    clear: both;
+.clr {
+  clear: both;
 }
 
 @media (max-width: 500px) {
-
-.div-1, .div-2{
+  .div-1,
+  .div-2 {
     float: none;
-}
+  }
 }
 
 .remAndEm {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #em {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #rem {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 :root {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .border-red {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .border-blue {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 .vh-100 {
-    height: 100vh;
+  height: 100vh;
 }
 
 .border-red > .h-50 {
-    height: 50%;
+  height: 50%;
 }
 
 div > p:first-of-type {
-    color: blue;
+  color: blue;
 }
 
 :first-of-type > p {
-    color: green;
+  color: green;
 }
 
 input[type="email"] {
-    border: red;
+  border: red;
 }
-Advanced Selectors
-19) selector: all paragraphs that are direct children of div's declarations: set the text color to blue
-20) selector: all sections that come immediately after a div declarations: set the text color to green
-21) selector: all inputs with the type attribute of email declarations: set border color to red
-
-Github
-22) Push your changes to github
-23) Open a pull request from your "practice" branch into your "main" branch
-25) Merge the pull request
