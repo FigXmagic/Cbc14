@@ -1,8 +1,8 @@
 # Homework
-## Week 3 Homework 1- Margin, Padding, Floats, Display, & Position
-## Week 3 Homework 2 - Media Query
-## Week 3 Homework 3- Flexbox
-### *** Homework : Create a TODO list w/ Javascript HTML and CSS
+- Week 3 Homework 1- Margin, Padding, Floats, Display, & Position
+- Week 3 Homework 2 - Media Query
+- Week 3 Homework 3- Flexbox
+- *** Homework : Create a TODO list w/ Javascript HTML and CSS
 
 # Addtional Notes/context
 
