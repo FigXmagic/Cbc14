@@ -1,5 +1,19 @@
-document.getElementById("header").styles.backgroundColor = "blue";
+const para = document.querySelector("p");
+// create a div
+const div = document.getElementById("paragraph");
+para.addEventListener("click", updateName);
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
+function updateName() {
+  const name = prompt("Enter a new name");
+  para.textContent = `Player 1: ${name}`;
+  createBio();
+}
+
+// append a bio
+function createBio() {
+  paragraph = document.createElement("p");
+  const stringToAppend = "I am a Human.";
+  paragraph.innerHTML = stringToAppend;
+  div.appendChild(paragraph);
+  console.log("completed createBio");
 }
