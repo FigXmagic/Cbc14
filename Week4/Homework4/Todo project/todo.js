@@ -55,7 +55,7 @@ function removeAll() {
 
 function hello() {
   alert("Done!!");
-  var ele = document.getElementsByClassName("input");
+  var ele = document.getElementsByClassName("item_input");
   for (var i = 0; i < ele.length; i++) {
     ele[i].style.setProperty("text-decoration", "line-through");
   }
