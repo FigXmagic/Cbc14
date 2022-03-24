@@ -1,6 +1,7 @@
 var container = document.querySelector(".container");
 var value1 = document.querySelector(".input");
 var add1 = document.querySelector(".add");
+var ele = document.getElementsByClassName("completed");
 
 class item {
   constructor(name) {
@@ -50,4 +51,12 @@ function check() {
 
 function removeAll() {
   document.querySelector(".container").innerHTML = "";
+}
+
+function hello() {
+  alert("Done!!");
+  var ele = document.getElementsByClassName("input");
+  for (var i = 0; i < ele.length; i++) {
+    ele[i].style.setProperty("text-decoration", "line-through");
+  }
 }
