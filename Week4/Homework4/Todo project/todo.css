@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/Atlas/Media/Images/todostyle.png);
+  background-attachment: fixed;
+  background-position: center;
+  display: block;
+  box-sizing: border-box;
+  background-size: 85%;
+  padding: 10vh 23vw 10vh 23vw;
+}
+
+.hii {
+  margin: 0vh 11vw -14vh 11vw;
+  padding-bottom: 13vh;
+  border-style: outset;
+  border-width: thick;
+  text-align: center;
+  font-family: cursive;
+  font-size: 24px;
+  border: 10px solid rgba(117, 9, 9, 0.226);
+  border-top-width: 10px;
+  padding-top: 33px;
+  padding-bottom: 169px;
+  min-height: 26em;
+  width: 60%;
+  resize: both;
+  background-image: url(/Atlas/Media/Images/JPEG/spaceman.png);
+  background-position: center;
+  background-size: 68%;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin: 1rem 0 3rem;
+  padding-bottom: 3vh;
+  text-shadow: 2px 2px 3px black;
+}
+
+.title {
+  color: rgb(236, 230, 230);
+  font-weight: 300;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  outline: none;
+  height: 50px;
+  border-radius: 10px;
+  width: 320px;
+  margin: 0.4rem;
+  transition: 0.5s;
+  font-size: 1.15rem;
+}
+
+.add {
+  outline: none;
+  border: solid white;
+  width: 50px;
+  border-radius: 10px;
+  height: 50px;
+  background-color: rgba(42, 129, 103, 0.527);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0.25rem;
+}
+
+.add:hover {
+  background: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.item_input {
+  background: white;
+  outline: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  margin-top: 15px;
+  font-size: 20px;
+  width: 315px;
+}
+
+.remove {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgba(235, 4, 4, 0.671);
+  font-size: 2rem;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.remove_btn {
+  margin-top: 35px;
+  color: aliceblue;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(146, 54, 20, 0.562);
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  transition: all 0.4s ease 0s;
+  height: 55px;
+  width: 150px;
+}
+
+.remove_btn:hover {
+  background: red;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
