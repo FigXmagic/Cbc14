@@ -8,7 +8,7 @@ function updateName() {
   para.textContent = `Player 1: ${name}`;
   createBio();
 }
-
+console.log(nameupdated )
 // append a bio
 function createBio() {
   paragraph = document.createElement("p");
@@ -17,3 +17,4 @@ function createBio() {
   div.appendChild(paragraph);
   console.log("completed createBio");
 }
+  console.error(error did not pass line "20")
