@@ -1,28 +1,53 @@
-var bob1 = prompt("Enter a number");
-var num1 = Number(bob1);
+const game = {
+  win: 0,
+  loss: 0,
+};
 
-var bob2 = prompt("Enter another number");
-var num2 = Number(bob2);
+const choices = ["rock", "paper", "scissors"];
 
-alert(Math.pow(num1, num2));
+var random1 = Math.floor(Math.random() * (3 - 1) + 0);
+var random2 = Math.floor(Math.random() * (3 - 1) + 0);
 
-var getRandom = Math.floor(Math.random() * (4 - 1) + 1);
-console.log(getRandom);
+var bot1 = choices[random1];
+var bot2 = choices[random2];
 
-const alphabet = ["a", "b", "c", "d", "e", "f"];
+var compare = function (choice1, choice2) {
+  var x = choices.indexOf(choice1),
+    y = choices.indexOf(choice2);
+  if (x === y) {
+    return "The result is a tie!";
+  }
 
-var myIndex = alphabet.indexOf("f");
-if (myIndex !== -1) {
-  alphabet.splice(myIndex, 1);
-}
+  return ((x - y) % 3 > 0 ? choice1 : choice2) + " wins";
 
-alphabet.push("g");
+  if (choice1 === choice2) {
+    return "The result is a tie!";
+  }
 
-var myIndex = alphabet.indexOf("a");
-if (myIndex !== -1) {
-  alphabet.splice(myIndex, 1);
-}
+  if (choice1 === "rock") {
+    if (choice2 === "scissors") {
+      return "rock wins";
+    } else {
+      return "paper wins";
+    }
+  }
 
-alphabet.unshift(1);
+  if (choice1 === "paper") {
+    if (choice2 === "rock") {
+      return "paper wins";
+    } else {
+      return "scissors wins";
+    }
+  }
 
-console.log(alphabet);
+  if (choice1 === "paper") {
+    if (choice2 === "scissors") {
+      return "scissors wins";
+    } else {
+      return "rock wins";
+    }
+  }
+};
+var results = "";
+
+console.log(results);
