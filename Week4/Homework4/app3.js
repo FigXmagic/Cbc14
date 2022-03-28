@@ -1,28 +1,44 @@
-var bob1 = prompt("Enter a number");
-var num1 = Number(bob1);
+let game = { win: 0, loss: 0 };
+let choices = ["Rock", "Paper", "Scissors"];
 
-var bob2 = prompt("Enter another number");
-var num2 = Number(bob2);
+function getRandomInt(max) {
+  return Math.floor(Math.random() * choices.length);
+}
+var random1 = getRandomInt();
 
-alert(Math.pow(num1, num2));
+var random2 = getRandomInt();
 
-var getRandom = Math.floor(Math.random() * (4 - 1) + 1);
-console.log(getRandom);
+var bot1 = choices[random1];
+var bot2 = choices[random2];
 
-const alphabet = ["a", "b", "c", "d", "e", "f"];
+console.log(bot1);
+console.log(bot2);
 
-var myIndex = alphabet.indexOf("f");
-if (myIndex !== -1) {
-  alphabet.splice(myIndex, 1);
+if (
+  (bot1 === "ROCK" && bot2 === "SCISSORS") ||
+  (bot1 === "PAPER" && bot2 === "ROCK") ||
+  (bot1 === "SCISSORS" && bot2 === "PAPER")
+) {
+  game.win = 1;
+} else if (
+  (bot1 === "ROCK" && bot2 === "PAPER") ||
+  (bot1 === "PAPER" && bot2 === "SCISSORS") ||
+  (bot1 === "SCISSORS" && bot2 === "ROCK")
+) {
+  game.loss = 1;
+} else if (random1 === random2) {
 }
 
-alphabet.push("g");
-
-var myIndex = alphabet.indexOf("a");
-if (myIndex !== -1) {
-  alphabet.splice(myIndex, 1);
+var results = "";
+if (game.win > 0) {
+  results += bot1;
+  results += " beats ";
+  results += bot2;
+} else if (game.loss > 0) {
+  results += bot2;
+  results += " beats ";
+  results += bot1;
+} else {
+  results += " Tie Game ";
 }
-
-alphabet.unshift(1);
-
-console.log(alphabet);
+console.log(results);
