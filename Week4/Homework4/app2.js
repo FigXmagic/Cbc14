@@ -6,7 +6,7 @@ var num2 = Number(bob2);
 
 alert(Math.pow(num1, num2));
 
-var getRandom = Math.floor(Math.random() * (3 - 1) + 1);
+var getRandom = Math.floor(Math.random() * (4 - 1) + 1);
 console.log(getRandom);
 
 const alphabet = ["a", "b", "c", "d", "e", "f"];
