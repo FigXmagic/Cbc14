@@ -1,53 +1,44 @@
-const game = {
-  win: 0,
-  loss: 0,
-};
+let game = { win: 0, loss: 0 };
+let choices = ["Rock", "Paper", "Scissors"];
 
-const choices = ["rock", "paper", "scissors"];
+function getRandomInt(max) {
+  return Math.floor(Math.random() * choices.length);
+}
+var random1 = getRandomInt();
 
-var random1 = Math.floor(Math.random() * (3 - 1) + 0);
-var random2 = Math.floor(Math.random() * (3 - 1) + 0);
+var random2 = getRandomInt();
 
 var bot1 = choices[random1];
 var bot2 = choices[random2];
 
-var compare = function (choice1, choice2) {
-  var x = choices.indexOf(choice1),
-    y = choices.indexOf(choice2);
-  if (x === y) {
-    return "The result is a tie!";
-  }
+console.log(bot1);
+console.log(bot2);
 
-  return ((x - y) % 3 > 0 ? choice1 : choice2) + " wins";
+if (
+  (bot1 === "ROCK" && bot2 === "SCISSORS") ||
+  (bot1 === "PAPER" && bot2 === "ROCK") ||
+  (bot1 === "SCISSORS" && bot2 === "PAPER")
+) {
+  game.win = 1;
+} else if (
+  (bot1 === "ROCK" && bot2 === "PAPER") ||
+  (bot1 === "PAPER" && bot2 === "SCISSORS") ||
+  (bot1 === "SCISSORS" && bot2 === "ROCK")
+) {
+  game.loss = 1;
+} else if (random1 === random2) {
+}
 
-  if (choice1 === choice2) {
-    return "The result is a tie!";
-  }
-
-  if (choice1 === "rock") {
-    if (choice2 === "scissors") {
-      return "rock wins";
-    } else {
-      return "paper wins";
-    }
-  }
-
-  if (choice1 === "paper") {
-    if (choice2 === "rock") {
-      return "paper wins";
-    } else {
-      return "scissors wins";
-    }
-  }
-
-  if (choice1 === "paper") {
-    if (choice2 === "scissors") {
-      return "scissors wins";
-    } else {
-      return "rock wins";
-    }
-  }
-};
 var results = "";
-
+if (game.win > 0) {
+  results += bot1;
+  results += " beats ";
+  results += bot2;
+} else if (game.loss > 0) {
+  results += bot2;
+  results += " beats ";
+  results += bot1;
+} else {
+  results += " Tie Game ";
+}
 console.log(results);
