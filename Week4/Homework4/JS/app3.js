@@ -1,44 +1,80 @@
-let game = { win: 0, loss: 0 };
-let choices = ["Rock", "Paper", "Scissors"];
+const game = {
+  win: 0,
+  loss: 0,
+};
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * choices.length);
-}
-var random1 = getRandomInt();
+const choices = ["rock", "paper", "scissors"];
 
-var random2 = getRandomInt();
+var random1 = Math.round(Math.random() * 2);
+var random2 = Math.round(Math.random() * 2);
 
 var bot1 = choices[random1];
 var bot2 = choices[random2];
 
-console.log(bot1);
-console.log(bot2);
+console.log("Player 1:" + bot1);
+console.log("Player 2:" + bot2);
 
-if (
-  (bot1 === "ROCK" && bot2 === "SCISSORS") ||
-  (bot1 === "PAPER" && bot2 === "ROCK") ||
-  (bot1 === "SCISSORS" && bot2 === "PAPER")
-) {
-  game.win = 1;
-} else if (
-  (bot1 === "ROCK" && bot2 === "PAPER") ||
-  (bot1 === "PAPER" && bot2 === "SCISSORS") ||
-  (bot1 === "SCISSORS" && bot2 === "ROCK")
-) {
-  game.loss = 1;
-} else if (random1 === random2) {
+let x = bot1;
+let y = bot2;
+
+switch (x) {
+  case "paper":
+    switch (y) {
+      case "rock":
+        console.log("Player 1 Wins!");
+        break;
+      case "scissors":
+        console.log("Player 2 Wins!");
+        break;
+      case "paper":
+        console.log("Draw!");
+        break;
+    }
 }
 
-var results = "";
-if (game.win > 0) {
-  results += bot1;
-  results += " beats ";
-  results += bot2;
-} else if (game.loss > 0) {
-  results += bot2;
-  results += " beats ";
-  results += bot1;
-} else {
-  results += " Tie Game ";
+switch (x) {
+  case "rock":
+    switch (y) {
+      case "scissors":
+        console.log("Player 1 Wins!");
+        break;
+      case "paper":
+        console.log("Player 2 Wins!");
+        break;
+      case "rock":
+        console.log("Draw!");
+        break;
+    }
 }
-console.log(results);
+
+switch (x) {
+  case "scissors":
+    switch (y) {
+      case "paper":
+        console.log("Player 1 Wins!");
+        break;
+      case "rock":
+        console.log("Player 2 Wins!");
+        break;
+      case "scissors":
+        console.log("Draw!");
+        break;
+    }
+}
+const x,y = {
+  rock: {
+    name: "Rock",
+    defeats: "scissors",
+  },
+  paper: {
+    name: "Paper",
+    defeats: "rock",
+  },
+  scissors: {
+    name: "Scissors",
+    defeats: "paper",
+  },
+};
+
+if (bot1 != x) console.log(bot2);
+if (bot2 == y) console.log(bot2);
