@@ -1,62 +1,83 @@
-var container = document.querySelector(".container");
-var value1 = document.querySelector(".input");
-var add1 = document.querySelector(".add");
-var ele = document.getElementsByClassName("completed");
+let todoItems = [];
 
-class item {
-  constructor(name) {
-    this.create(name);
+function renderTodo(todo) {
+  const list = document.querySelector(".js-todo-list");
+  const item = document.querySelector(`[data-key='${todo.id}']`);
+
+  if (todo.deleted) {
+    item.remove();
+    return;
   }
-  create(name) {
-    var l1 = document.createElement("div");
+  const isChecked = todo.checked ? "done" : "";
+  const node = document.createElement("li");
+  node.setAttribute("class", `todo-item ${isChecked}`);
+  node.setAttribute("data-key", todo.id);
+  node.innerHTML = `
+      <input id="${todo.id}" type="checkbox"/>
+      <label for="${todo.id}" class="tick js-tick"></label>
+      <span>${todo.text}</span>
+      <button class="delete-todo js-delete-todo">
+      <svg><use href="#delete-icon"></use></svg>
+      </button>
+    `;
 
-    l1.classList.add("item");
-
-    var input = document.createElement("input");
-    input.type = "text";
-    input.disabled = true;
-    input.value = name;
-    input.classList.add("item_input");
-
-    var remove = document.createElement("button");
-    remove.classList.add("remove");
-    remove.innerHTML = '<i class="fas fa-trash"></i>';
-    remove.addEventListener("click", () => this.remove(l1));
-
-    container.appendChild(l1);
-
-    l1.appendChild(input);
-
-    l1.appendChild(remove);
-  }
-
-  remove(l1) {
-    container.removeChild(l1);
+  if (item) {
+    list.replaceChild(node, item);
+  } else {
+    list.append(node);
   }
 }
 
-add1.addEventListener("click", check);
-window.addEventListener("keydown", (e) => {
-  if (e.which == 13) {
-    check();
+function addTodo(text) {
+  const todo = {
+    text,
+    checked: false,
+    id: Date.now(),
+  };
+
+  todoItems.push(todo);
+  renderTodo(todo);
+}
+
+function toggleDone(key) {
+  const index = todoItems.findIndex((item) => item.id === Number(key));
+  todoItems[index].checked = !todoItems[index].checked;
+  renderTodo(todoItems[index]);
+}
+function deleteTodo(key) {
+  const index = todoItems.findIndex((item) => item.id === Number(key));
+
+  const todo = {
+    deleted: true,
+    ...todoItems[index],
+  };
+
+  todoItems = todoItems.filter((item) => item.id !== Number(key));
+  renderTodo(todo);
+}
+
+const form = document.querySelector(".js-form");
+window.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = document.querySelector(".js-todo-input");
+
+  const text = input.value.trim();
+  if (text !== "") {
+    addTodo(text);
+    input.value = "";
+    input.focus();
   }
 });
 
-function check() {
-  if (value1.value != null) {
-    new item(value1.value);
-    value1.value = null;
+const list = document.querySelector(".js-todo-list");
+list.addEventListener("click", (event) => {
+  if (event.target.classList.contains("js-tick")) {
+    const itemKey = event.target.parentElement.dataset.key;
+    toggleDone(itemKey);
   }
-}
 
-function removeAll() {
-  document.querySelector(".container").innerHTML = "";
-}
-
-function hello() {
-  alert("Done!!");
-  var ele = document.getElementsByClassName("item_input");
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.setProperty("text-decoration", "line-through");
+  if (event.target.classList.contains("js-delete-todo")) {
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
   }
-}
+});
