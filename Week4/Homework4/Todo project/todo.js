@@ -1,5 +1,16 @@
 let todoItems = [];
 
+function addTodo(text) {
+  const todo = {
+    text,
+    checked: false,
+    id: Date.now(),
+  };
+
+  todoItems.push(todo);
+  renderTodo(todo);
+}
+
 function renderTodo(todo) {
   const list = document.querySelector(".js-todo-list");
   const item = document.querySelector(`[data-key='${todo.id}']`);
@@ -26,17 +37,6 @@ function renderTodo(todo) {
   } else {
     list.append(node);
   }
-}
-
-function addTodo(text) {
-  const todo = {
-    text,
-    checked: false,
-    id: Date.now(),
-  };
-
-  todoItems.push(todo);
-  renderTodo(todo);
 }
 
 function toggleDone(key) {
