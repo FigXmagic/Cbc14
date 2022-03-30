@@ -1,3 +1,4 @@
+// define an element
 const food = [
   "okra",
   "carrots",
@@ -10,27 +11,42 @@ const food = [
   "oranges",
 ];
 console.log(food);
+// remove one element
 food.pop();
 console.log(food);
+// add an element
 food.push("strawberries");
 console.log(food);
 food.shift();
 console.log(food);
-food.unshift(broccoli);
+//add element to the front of page
+food.unshift("broccoli");
 console.log(food);
-let veggies = food.slice(0, 6);
+
+// define veggies and fruits
+
+let veggies = food.slice(0, 5);
 console.log(veggies);
-let fruit = food.slice(6);
+
+let fruit = food.slice(5);
 console.log(fruit);
-const food = veggies.concat(fruit);
+
+food.splice(4, 1);
 console.log(food);
-food.slice(5, 1);
+
+food.splice(2, 2, "brussels sprouts");
 console.log(food);
+
 var text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.";
-console.log(text[5]);
-console.log(text[-1]);
+console.log([text[5]]);
+const last = text[text.length - 1];
+console.log([last]);
+
 let lastItem = text.slice(-1);
 console.log(lastItem);
 var lorem = text.slice(0, 5);
 console.log(lorem);
-var chores;
+var chores1 = "clean, pay bills, groceries";
+var chores2 = "learn JS, doctors office, pick up kids";
+var allChores = chores1.split(chores2);
+console.log(allChores);
