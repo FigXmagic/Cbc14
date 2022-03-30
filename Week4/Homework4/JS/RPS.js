@@ -1,5 +1,5 @@
 let playerScoreEl = document.getElementById("playerScore");
-let playerChoiceEl = document.getElementById("playerchoice");
+let playerChoiceEl = document.getElementById("playerChoice");
 let compScoreEl = document.getElementById("compScore");
 let compChoiceEl = document.getElementById("compChoice");
 
@@ -7,9 +7,9 @@ let playerRock = document.getElementById("playerRock");
 let playerPaper = document.getElementById("playerPaper");
 let playerScissors = document.getElementById("playerScissors");
 
-let compRock = document.getElementById("playerRock");
-let compPaper = document.getElementById("playerPaper");
-let compScissors = document.getElementById("playerScissors");
+let compRock = document.getElementById("compRock");
+let compPaper = document.getElementById("compPaper");
+let compScissors = document.getElementById("compScissors");
 
 let gameIcons = document.querySelectorAll(".far");
 
@@ -32,6 +32,17 @@ let playerScoreNumber = 0;
 let compScoreNumber = 0;
 let compChoice = "";
 
+function resetAll() {
+  playerScoreNumber = 0;
+  compScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  compScoreEl.textContent = compScoreNumber;
+  playerChoiceEl.textContent = "";
+  compChoiceEl.textContent = "";
+  resultText.textContent = "";
+  resetSelected();
+}
+
 function compRandomChoice() {
   const compChoiceNumber = Math.random();
   if (compChoiceNumber < 0.2) {
@@ -43,7 +54,7 @@ function compRandomChoice() {
   }
 }
 
-function displaycompChoice() {
+function displayCompChoice() {
   switch (compChoice) {
     case "rock":
       compRock.classList.add("selected");
@@ -57,6 +68,7 @@ function displaycompChoice() {
       compScissors.classList.add("selected");
       compChoiceEl.textContent = "--Scissors";
       break;
+
     default:
       break;
   }
@@ -64,11 +76,11 @@ function displaycompChoice() {
 
 function updateScore(playerChoice) {
   if (playerChoice === compChoice) {
-    resultText.textContent = "it's a tie!";
+    resultText.textContent = "It's a tie";
   } else {
     let choice = choices[playerChoice];
-    if (choice.defears.indexof(compChoice) > -1) {
-      resultText.textContent = "yout Won!";
+    if (choice.defeats.indexOf(compChoice) > -1) {
+      resultText.textContent = "You Won!";
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
     } else {
@@ -86,8 +98,9 @@ function resetSelected() {
 }
 
 function checkResult(playerChoice) {
+  resetSelected();
   compRandomChoice();
-  displaycompChoice();
+  displayCompChoice();
   updateScore(playerChoice);
 }
 
@@ -105,13 +118,19 @@ function select(playerChoice) {
       break;
     case "scissors":
       playerScissors.classList.add("selected");
-      playerChoiceEl.textContent = "--Scissors";
+      playerChoice.textContent = "--Scissors";
       break;
     default:
       break;
   }
 }
 
-function checkResult(playerChoice) {
-  resetSelected();
-}
+playerRock.addEventListener("click", function () {
+  document.body.classList.toggle("colorrock");
+});
+playerPaper.addEventListener("click", function () {
+  document.body.classList.toggle("colorpaper");
+});
+playerScissors.addEventListener("click", function () {
+  document.body.classList.toggle("colorscissor");
+});
