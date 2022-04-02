@@ -1,5 +1,5 @@
 //Jorge Figueroa//
-//6:40 PM UTC March 31st 2022//
+//10:19 PM UTC April2nd 2022//
 
 //Start//Food//
 
@@ -57,9 +57,7 @@ console.log([lorem]);
 
 var chores1 = "clean, pay bills, groceries";
 var chores2 = "learn JS, doctors office, pick up kids";
-
-var allChores = chores1.split(chores2);
-
-var x = allChores.concat(chores2);
-
-console.log(x);
+chores1Combine = chores1.split(/\s*,\s*/);
+chores2Combine = chores2.split(/\s*,\s*/);
+var allChores = chores1Combine.concat(chores2Combine);
+console.log(allChores);
