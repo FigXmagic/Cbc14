@@ -1,7 +1,7 @@
 //Jorge Figueroa//
 //April 4th 2022 4:00AM UTC//
 
-var deadline = new Date("apr 4, 2022 00:26:06").getTime();
+var deadline = new Date("oct 20, 2022 00:26:06").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
