@@ -34,10 +34,10 @@ for (var i = 1; i >= 1; i--) {
   );
 } */
 
-let bools = [true, true, false, true, false, true, true, true];
+var bools = [true, true, false, true, false, true, true, true];
 for (let i = 0; i <= bools.length; i++) {
   if (bools[i] === true) {
-    console.log(bools[i]);
+    console.log([bools[i]]);
   }
 }
 
@@ -45,6 +45,6 @@ let str = "apples";
 let vowels = ["a", "e", "i", "o", "u"];
 for (let i = 0; i <= str.length; i++) {
   if (vowels.includes(str[i])) {
-    console.log(str[i]);
+    console.log([str[i]]);
   }
 }
