@@ -18,7 +18,7 @@ const myHobbies = ["Gamming", "Crypto", "Reading", "Eating", "Drawing"];
 
 var ul = document.querySelector("ul");
 for (i = 0; i < myHobbies.length; i++) {
-  ul.appendChild(document.createElement("li")).textContent = hobbies[i];
+  ul.appendChild(document.createElement("li")).textContent = myHobbies[i];
 }
 
 //form//
