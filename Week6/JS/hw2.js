@@ -9,30 +9,31 @@ var paragraphs = document.querySelector("div").querySelectorAll("p");
 paragraphs.forEach((p) => {
   p.className = "blue";
 });
-/* console.log(paragraphs); */
 
 var newP = document.querySelector("div");
 
 newP.appendChild(document.createElement("p")).textContent = "new paragraph";
 
-//Hobbies list//
-const hobbies = ["Gamming", "Crypto", "Reading", "Eating", "Drawing"];
+const myHobbies = ["Gamming", "Crypto", "Reading", "Eating", "Drawing"];
 
 var ul = document.querySelector("ul");
-for (i = 0; i < hobbies.length; i++) {
+for (i = 0; i < myHobbies.length; i++) {
   ul.appendChild(document.createElement("li")).textContent = hobbies[i];
 }
 
 //form//
+
 var form = document.querySelector("form");
+const goButton = document.querySelector("#go");
+const stopButton = document.querySelector("#stop");
 
 form.addEventListener("click", function (event) {
   event.preventDefault();
-  const classId = event.target.id;
-
-  if (classId == "go") {
-    event.target.className = "go";
-  } else if (classId == "stop") {
-    event.target.className = "stop";
+  if (event.target == goButton) {
+    goButton.classList.add("go");
+    stopButton.classList.remove("stop");
+  } else if (event.target == stopButton) {
+    stopButton.classList.add("stop");
+    goButton.classList.remove("go");
   }
 });
