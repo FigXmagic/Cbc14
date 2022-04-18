@@ -36,7 +36,7 @@ me["canDrink"] = true;
 console.log(me);
 
 me["greet"] = function () {
-  return "Hello my name is" + " " + this.name;
+  return `Hello my name is ${this.name}`;
 };
 
 console.log(me.greet());
@@ -47,8 +47,15 @@ if (me.name.includes("e")) {
   console.log("false");
 }
 
-if (me.hasOwnProperty("canDrink")) {
-  if (me.canDrink == true) console.log(me.name + " " + "can drink");
-} else {
-  console.log(me.name + " " + "cannot drink");
-}
+idCheck = (myName) => {
+  var myName = me.name;
+  var myAge = me.age;
+
+  if (`${myAge}` > 20) {
+    if (true) console.log(`${myName} can drink`);
+  } else {
+    console.log(`${myName} cannot drink`);
+  }
+};
+
+idCheck();
