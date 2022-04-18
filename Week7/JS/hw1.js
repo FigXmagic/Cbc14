@@ -1,3 +1,8 @@
+/* if (setTimeout > 3000) {
+  console.log("off");
+} else if (true)
+  function timerOut() {
+    if (true) { */
 //2//
 let wizardName = "jon Dee";
 
@@ -16,7 +21,7 @@ if (true) {
   var luckRoll = 3.3;
   var roundUP = Math.round(luckRoll * Math.random(3.3));
   //6//
-  console.log("Luck:" + " " + roundUP++);
+  console.log("Luck:" + " " + roundUP);
 }
 
 /* function gainGrit() {
@@ -69,14 +74,20 @@ if (isWizard == true && level == 6) {
       power: 6,
     },
   ];
+
   //11//
   attack.push(attack6);
 }
 
+var isAttack = attack[0];
+
 console.log(attack);
+console.log(isAttack);
 //12//
-const spAbilities = "";
+
+const spAbilities = {};
 console.log(spAbilities);
+
 //13//
 const createdBy = [
   {
@@ -104,10 +115,56 @@ console.log(myName);
 console.log(myAge);
 
 //17//
-let arrow = () => "hello World";
-arrow1 = arrow;
-console.log(arrow());
+hello = () => "Hello" + " ";
+var arrow1 = hello() + "World!";
+console.log(arrow1);
 
-let arrowAccept = (str) => console.log(str);
-arrow2 = str;
-console.log(arrow2());
+console.log(isAttack[0]);
+//18//
+fireball = (str) => {
+  var str = isAttack[0];
+  var arrow2 = `Player used ${str.attack}, ${str.power} damage was dealt`;
+  console.log(arrow2);
+};
+
+fireball();
+//19//
+bonusDamage = (a1, b1) => {
+  var a1 = manaLevel;
+  var b1 = roundUP;
+  var arrow3 = (a1 * b1) / a1;
+  console.log(`Bonus Damage: + ${arrow3}`);
+};
+
+bonusDamage();
+
+//20//
+setTimeout(function () {
+  if (roundUP > 1) {
+    document.write(
+      "<img src='https://imgs.search.brave.com/__tx_jtfbmEJl2b3Dujp11gj4Eq4YTwJ6bswlKPrOYI/rs:fit:500:210:1/g:ce/aHR0cDovLzIuYnAu/YmxvZ3Nwb3QuY29t/Ly12WlNxbFBvYW1w/by9VY1VwRG5mZGU0/SS9BQUFBQUFBQUFX/WS95ZnBYOHFkZ1VQ/WS9zMTYwMC9pbnRv/VGhlRmlyZTEucG5n' alt='alt tag'>"
+    );
+    console.log("Bonus Hit!");
+  } else {
+    console.log("Bounus Miss!");
+  }
+}, 2310);
+
+//21//
+for (const element of attack) {
+  console.log(element);
+}
+
+//22/
+if (Object.keys(spAbilities).length === 0) {
+  Object.assign(spAbilities, { name: "Magic Force", power: 5 });
+}
+console.log(spAbilities);
+
+for (const key of Object.keys(spAbilities)) {
+  console.log(`${key}: ${spAbilities[key]}`);
+}
+
+for (let i = 1; i <= myAge; i++) {
+  console.log(`my age is ${myAge}`);
+}
