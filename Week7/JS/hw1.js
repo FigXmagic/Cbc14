@@ -1,8 +1,6 @@
-/* if (setTimeout > 3000) {
-  console.log("off");
-} else if (true)
-  function timerOut() {
-    if (true) { */
+//Jorge Figueroa//
+//4.18.21//
+
 //2//
 let wizardName = "jon Dee";
 
