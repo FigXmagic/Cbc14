@@ -1,1 +1,29 @@
 # Week 6
+## Areas and topics covered this week. Assigments revolved around these questions
+- What is ES6?
+- What are let and const?
+- What are template literals?
+- What is a ternary operator?
+- What is the purpose of this?
+- Why do we use the "new" keyword in javascript?
+- What is OOP?
+- What is a class?
+- What is a consstructor?
+- What does static mean?
+- What is inheritance?
+- What doe Asynchronous mean?
+- What are promises in Javascript?
+- How do we use promises in Javascript?
+- What is AJAX?
+- Why is AJAX important?
+- What is an XHR request?
+- What are Try & Catch statements?
+- What is Typescript?
+- How do we use typescript?
+- What is an interface?
+- What is Duck typing?
+- What is an enum?
+- What are getters and setters?
+- What are/is the meaning of Public and Private access specifiers?
+- What are typescript modules?
+- What is Polymorphism?
