@@ -16,6 +16,9 @@
 - Why is the DOM important?
 - Why is Javascript important?
 
+
+
+
 ### Week 2
 #### HTML
 - HTML Structure 
@@ -58,9 +61,15 @@
 
 
 
+
+
+
 ### Week 3
 - CSS animation
 - CSS Pseudo elements and classes
+
+
+
 
 ### week 4
 #### Javascript Basics
@@ -110,6 +119,11 @@
 - W3Schools
 
 
+
+
+
+
+
 ### Week 5
 #### Javascript Part Duex
 ##### Javascript debugging
@@ -121,8 +135,6 @@
 - Watch 
 - Call Stack
 - Editing with chrome dev tools
--
-
 
 #### Javascript DOM
 - Document Object Model 
@@ -177,6 +189,8 @@
 - .outerHTML
 - .value
 - .style
+
+![image](https://user-images.githubusercontent.com/72757855/165144177-3f3a43fe-e867-458a-a4a5-d42aa2785398.png)
 
 #### Javascript Events
 - $.addEventListener( {event}, callback( ) )
@@ -252,7 +266,6 @@
 - - \b
 
 #### HTML validation
-
 - Required
 - Minlength & maxlength
 - Min & max
@@ -292,10 +305,6 @@
 - localStorage.clear( )
 
 
-
-![image](https://user-images.githubusercontent.com/72757855/165144177-3f3a43fe-e867-458a-a4a5-d42aa2785398.png)
-
-
 #### Why do I care?
 - Debugging tools help developers find and fix errors in a program before releasing it to the public.
 - Javascript can be used to read, write, and update the HTML document.
@@ -307,11 +316,13 @@
 -  JSON makes it possible to store JavaScript objects as text
 -  Understanding the difference between local and session storage is very important. Local storage is retained indefinitely. Session storage is lost once the session is ended (e.g., closing the browser).
 
+
+
+
+
 ### Week 6
 “Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.”
-
-Kofi Annan
-
+ -Kofi Annan
 
 #### Even more Javascript
 
@@ -377,7 +388,6 @@ Kofi Annan
 - Xhr.onerror 
 - Xhr.send( )
 - this.responseText
-
 
 ![image](https://user-images.githubusercontent.com/72757855/165148198-e6f315d5-12d2-4494-aaa8-391f657d5b10.png)
 
@@ -466,8 +476,6 @@ Kofi Annan
 - Import keyword	
 - - Import { thing } from “ ./relative_path “
 - - The import keyword is used to use the declared module in another file.
-
-
 
 
 
