@@ -2,6 +2,17 @@ document.getElementById("page1").addEventListener("click", loadXMLDoc1);
 document.getElementById("page2").addEventListener("click", loadXMLDoc2); 
 document.getElementById("page3").addEventListener("click", loadXMLDoc3);
 
+var xmlhttp = new XMLHttpRequest(),
+  method = 'GET',
+  url = 'http://127.0.0.1:5500/repo/Cbc14/Week6/XMLHttpRequest/XHR-master/files/page1.html';
+
+xmlhttp.open(method, url, true);
+xmlhttp.onload = function () {
+  document.getElementById("page_content").innerHTML =
+  this.responseText;
+};
+xmlhttp.send();
+
 function loadXMLDoc1() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
