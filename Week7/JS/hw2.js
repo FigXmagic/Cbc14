@@ -6,43 +6,81 @@ class Person {
   }
   // Method
   getName() {
-    return `${this.name}  ${this.age}`;
+    return this.name + this.age;
   }
 }
-
-let myPerson = new Person("Fig", 33)
-console.log(myPerson)
 
 
 //2//
 class Employee extends Person {
   constructor(name, age, id) {
     super(name, age);
+    id = 0
     this.id = id;
   }
   getCompanyName() {
-    return `Web Development Solutions Incorporated` + this.show();
+    return `Web Development Solutions Incorporated` + this.getEmployeeID();
   }
   getEmployeeID() {
-    return this.id
+    return `${this.id}`
   }
 }
-let myEmployee = new Employee("Fig", 33, 11)
-console.log(myEmployee.id)
 
 //3//
 class Manager extends Employee{
   constructor(name, age, id, employees){
     super(name, age, id,)
-    this.employees = []
+    employees = []
   }
   newEmployee(){
-    return  this.getEmployeeID()
+    return  employees.push(getEmployee())
   }
-  getEmployee(){
-    return
+  getEmployees(){
+    return `${this.name} + ${this.age} + ${this.id}`
   }
 }
+
+
+//4//
+class Clerk extends Employee{
+  constructor(name, age, id, employees, supervisorId){
+    super(name, age, id)
+    this.supervisorId = supervisorId
+  }
+  getSupervisor(){
+    return this.supervisorId
+  }
+}
+
+
+//5//
+let currentId = 0;
+
+//6//
+let boss = new Manager("Fig", 33, currentId++, [])
+console.log(boss.name)
+//7//
+let clerk1 = new Clerk("Alice", 44, currentId++, boss.getEmployeeID)
+console.log(clerk1.name)
+//8//
+let clerk2 = new Clerk("Bob", 64, currentId++, boss.getEmployeeID)
+console.log(clerk2.name)
+
+//9//
+boss.getEmployees(clerk1)
+console.log(boss.employees)
+//10//
+
+
+//11//
+console.log(boss.id)
+console.log(clerk2.getSupervisor())
+
+//12//
+console.log(getEmployees())
+
+
+//5//
 
 /* //1//
 class Person {
