@@ -25,7 +25,7 @@ class Employee extends Person {
 
 //3//
 class Manager extends Employee{
-  constructor(name, age, employeeID, employees){
+  constructor(name, age, employeeID, employees= []){
     super(name, age, employeeID,)
     this.employees = employees
   }
@@ -84,7 +84,7 @@ console.log(clerk2.getSupervisor())
 
 //12//
 console.log(boss.getEmployees())
-
+console.log(boss.employees)
 
 //5//
 
