@@ -1,6 +1,6 @@
 setInterval(showTime, 1000);
-
-document.getElementById("button").addEventListener("click", showTime)
+/* 
+document.getElementById("button").addEventListener("click", showTime) */
 function showTime() {
     let time = new Date();
     let hour = time.getHours();
@@ -29,7 +29,7 @@ function showTime() {
 }
 showTime();
 
-function currentTime() {
+/* function currentTime() {
     let date = new Date();
     let hh = date.getHours();
     let mm = date.getMinutes();
@@ -51,7 +51,7 @@ function currentTime() {
 
   }
 
-currentTime();
+currentTime(); */
 
 
 /* 
