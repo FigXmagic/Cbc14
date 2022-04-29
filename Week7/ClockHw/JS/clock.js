@@ -1,5 +1,5 @@
 setInterval(showTime, 1000);
-/* 
+/*
 document.getElementById("button").addEventListener("click", showTime) */
 function showTime() {
     let time = new Date();
@@ -54,10 +54,12 @@ showTime();
 currentTime(); */
 
 
-/* 
+/*
 x) Style the clock to look nicer, animate it, etc.
 x) Sync clock up with system/client time
 x) Display AM/PM values
+
+todo
 4) Button to display military time (24 hour time)
 5) Create controls to set an alarm -> play alarm sound effect once time is reached
 6) Display time using a clock face
