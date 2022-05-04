@@ -71,11 +71,11 @@ let xhr5 = new XMLHttpRequest();
 
 //---^^ All My XMLH Request ^^----//
 
-let x = [Math.floor(Math.random() * 369)];
+let x = [Math.floor(Math.random() * 549)];
 
-const norrisJ = 'http://api.icndb.com/jokes/15';
-const jRandom = new URL('random', norrisJ);
-const j369 = new URL('369', norrisJ);
+const norrisJoke = 'http://api.icndb.com/jokes/15';
+const jRandom = new URL('random', norrisJoke);
+const j369 = new URL('369', norrisJoke);
 const jX = new URL(x ,j369)
 const newLink = "random"
 
@@ -105,7 +105,7 @@ xhr1.send()
 
 //---------^^^ Joke URL "Random" ^^^-----------//
 
-xhr2.open('GET', norrisJ, true);
+xhr2.open('GET', norrisJoke, true);
 xhr2.onload = function () {
 	const joke = JSON.parse(this.responseText).value.joke;
 	console.log(joke);
