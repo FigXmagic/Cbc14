@@ -59,7 +59,8 @@ Promise.all([promise3, promise4, promise5])
 .then(data => { console.log(data) })
 .catch(err => { console.log(err) })
 
-//----------18-----------------//
+
+//----------18 & Bonus Attempt Below------------//
 
 let xhr = new XMLHttpRequest();
 let xhr1 = new XMLHttpRequest();
@@ -68,16 +69,23 @@ let xhr3 = new XMLHttpRequest();
 let xhr4 = new XMLHttpRequest();
 let xhr5 = new XMLHttpRequest();
 
+//---^^ All My XMLH Request ^^----//
+
 let x = [Math.floor(Math.random() * 369)];
 
 const norrisJ = 'http://api.icndb.com/jokes/15';
 const jRandom = new URL('random', norrisJ);
-const j69 = new URL('69', norrisJ);
-const jX = new URL(x ,j69)
-
+const j369 = new URL('369', norrisJ);
+const jX = new URL(x ,j369)
 const newLink = "random"
+
+
 let random = encodeURI(newLink)
 let url = `http://api.icndb.com/jokes/${random}`;
+
+
+//---^^ All of my Variables ^^----//
+
 
 xhr.open('GET', 'http://api.icndb.com/jokes/15', true);
 xhr.onload = function () {
@@ -86,13 +94,7 @@ xhr.onload = function () {
 };
 xhr.send();
 
-
-xhr.open('GET', url, true);
-xhr.onload = function () {
-	const joke = JSON.parse(this.responseText).value.joke;
-	console.log(joke);
-};
-xhr.send()
+//---------^^^ Joke ID 15 ^^^-----------//
 
 xhr1.open('GET', url, true);
 xhr1.onload = function () {
@@ -101,20 +103,25 @@ xhr1.onload = function () {
 };
 xhr1.send()
 
-xhr2.open('GET', jRandom, true);
+//---------^^^ Joke URL "Random" ^^^-----------//
+
+xhr2.open('GET', norrisJ, true);
 xhr2.onload = function () {
 	const joke = JSON.parse(this.responseText).value.joke;
 	console.log(joke);
 };
 xhr2.send()
 
+//---------^^^ Joke URL "Random" ^^^-----------//
 
-xhr3.open('GET', j69, true);
+xhr3.open('GET', j369, true);
 xhr3.onload = function () {
 	const joke = JSON.parse(this.responseText).value.joke;
 	console.log(joke);
 };
 xhr3.send()
+
+//---------^^^  Joke No. 369  ^^^-----------//
 
 xhr4.open('GET', jX, true);
 xhr4.onload = function () {
@@ -122,3 +129,14 @@ xhr4.onload = function () {
 	console.log(joke);
 };
 xhr4.send()
+
+//---------^^^  Joke No. 69  ^^^-----------//
+
+xhr5.open('GET', jRandom, true);
+xhr5.onload = function () {
+	const joke = JSON.parse(this.responseText).value.joke;
+	console.log(joke);
+};
+xhr5.send()
+
+//---------^^^  Joke jRandom URL ^^^-----------//
