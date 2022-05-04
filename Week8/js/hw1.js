@@ -140,3 +140,6 @@ xhr5.onload = function () {
 xhr5.send()
 
 //---------^^^  Joke jRandom URL ^^^-----------//
+
+this.fin = x
+console.log(this.fin)
