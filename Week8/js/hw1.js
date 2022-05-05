@@ -94,7 +94,7 @@ xhr.onload = function () {
 };
 xhr.send();
 
-//---------^^^ Joke ID 15 ^^^-----------//
+//---------^^^ Joke ID #15 ^^^-----------//
 
 xhr1.open('GET', url, true);
 xhr1.onload = function () {
