@@ -2,4 +2,4 @@ function foo(){
     return "bar"
 }
 
-module.exports = foo()
+module.exports = {foo}
