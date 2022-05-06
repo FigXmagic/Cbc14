@@ -1,2 +1,2 @@
-const path = require('path')
-const file = require('file')
+const path = require('./path')
+const file = require(fs)
