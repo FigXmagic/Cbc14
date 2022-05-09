@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-//had to switch the if and else to make this work, was giving error every time when I followed the directions
+
 fs.access('./myNewFolder', fs.constants.F_OK, (err) => {
     if (err) {
         fs.mkdir('myNewFolder', (err) => {
