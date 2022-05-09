@@ -8,7 +8,7 @@ function subNums(...nums){
     return res
 }
 
-module.exports = {addNum, subNum}
+module.exports = {addNums, subNums}
 /* let x = 1
 let y = 2
 let z = 3
