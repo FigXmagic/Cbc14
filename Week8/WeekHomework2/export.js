@@ -1,4 +1,16 @@
-function addNums(...nums){
+function add(x,y) {
+    console.log(x + y);
+}
+
+function subtract(x,y) {
+    console.log(x - y);
+}
+
+module.exports = {add, subtract}
+
+
+
+/* function addNums(...nums){
     let res= nums.reduce((num1, num2) => num1 + num2)
     return res
 }
@@ -8,7 +20,7 @@ function subNums(...nums){
     return res
 }
 
-module.exports = {addNums, subNums}
+module.exports = {addNums, subNums} */
 /* let x = 1
 let y = 2
 let z = 3
