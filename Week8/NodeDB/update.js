@@ -23,7 +23,7 @@ connection.connect((err) =>{
     }else{
       console.log(result);
   }
-  var sql2 = "UPDATE fruits SET fruit_name = 'orange', quantity = 1 WHERE id = 1;";
+  var sql2 = "UPDATE fruits SET fruitname = 'orange', quantity = 1 WHERE id = 1;";
   connection.query(sql2,(err, result) => {
     if (err){ 
       console.log(err)
