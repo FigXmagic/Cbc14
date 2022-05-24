@@ -11,7 +11,8 @@ $email = $_POST['email'];
 
 
 // database insert SQL code
-$sql = "INSERT INTO `tbl_contact` (`Id`, `fldfullName`, `fldusername`, `fldemail`) VALUES ('0', '$txtName', '$username', '$txtemail')";
+$sql = "INSERT INTO `user_info`(`id`, `fldfullName`, `fldusername`, `fldemail`) VALUES ('NULL','$fullName','$username','$email')";
+/* $sql = "INSERT INTO `user_info` (`Id`, `fldfullName`, `fldusername`, `fldemail`) VALUES ('0', '$fullName', '$username', '$email')"; */
 
 // insert in database 
 $rs = mysqli_query($con, $sql);
